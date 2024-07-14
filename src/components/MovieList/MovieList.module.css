@@ -1,0 +1,12 @@
+.moviesItem {
+  list-style-type: none;
+  margin-top: 5px;
+}
+.moviesLink {
+  color: rgb(71, 70, 70);
+  font-weight: 600;
+  font-size: x-large;
+}
+.moviesLink:hover {
+  color: rgb(203, 144, 144);
+}
