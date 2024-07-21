@@ -14,7 +14,7 @@ const Loader = (
     color="darkgrey"
     ariaLabel="three-circles-loading"
     wrapperStyle={{}}
-    wrapperClass=""
+    wrapperClass="loader"
   />
 );
 const defaultImg =

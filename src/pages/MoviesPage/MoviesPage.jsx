@@ -14,7 +14,7 @@ const Loader = (
     color="darkgrey"
     ariaLabel="three-circles-loading"
     wrapperStyle={{ marginTop: "10px" }}
-    wrapperClass=""
+    wrapperClass="loader"
   />
 );
 export default function MoviesPage() {

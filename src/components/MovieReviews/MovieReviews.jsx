@@ -12,7 +12,7 @@ const Loader = (
     color="darkgrey"
     ariaLabel="three-circles-loading"
     wrapperStyle={{}}
-    wrapperClass=""
+    wrapperClass="loader"
   />
 );
 export default function MovieReviews() {

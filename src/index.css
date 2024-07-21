@@ -30,7 +30,7 @@ li {
   padding: 0;
 }
 .loader {
-  margin-left: 49vw;
+  padding-left: 49vw;
 }
 .notFound {
   margin: 10px 20px;
