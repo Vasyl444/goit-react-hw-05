@@ -29,7 +29,6 @@ export default function MovieReviews() {
           `/movie/${movieId}/reviews?language=en-US&page=1`
         );
         setReviews(result.results);
-        console.log(result.results);
       } catch {
         setError(true);
       } finally {

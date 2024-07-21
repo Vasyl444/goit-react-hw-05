@@ -24,14 +24,16 @@ export default function MoviesPage() {
   const [empty, setEmpty] = useState(false);
   const [load, setLoad] = useState(false);
   const [notFound, setNotFound] = useState(false);
+  const [change, setChange] = useState("");
+  const query = searchParams.get("query");
 
-  const query = searchParams.get("query") ?? "";
   useEffect(() => {
     async function searchMovie() {
       try {
         setNotFound(false);
         setError(false);
         setLoad(true);
+
         if (query === null) {
           return;
         } else {
@@ -48,21 +50,26 @@ export default function MoviesPage() {
     }
     searchMovie();
   }, [query]);
+
+  function onChange(ev) {
+    setChange(ev.target.value.trim());
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
+    setEmpty(false);
     const form = event.target;
-    const searchValue = document
-      .querySelector("input[name=searchForm]")
-      .value.trim();
-    searchValue === "" ? setEmpty(true) : setEmpty(false);
-    searchParams.set("query", searchValue);
+    if (change === "") {
+      setEmpty(true);
+      return;
+    }
+    searchParams.set("query", change);
     setSearchParams(searchParams);
     form.reset();
-    console.log(responseValue);
   }
   return (
     <div className={css.movieContainer}>
-      <SearchForm handleSubmit={handleSubmit} responseValue={responseValue} />
+      <SearchForm handleSubmit={handleSubmit} onChange={onChange} />
       {load && Loader}
       {error && <p className="notFound">Opps... Please, reload the page</p>}
       {empty && <p className="notFound">The field is empty</p>}

@@ -33,7 +33,6 @@ export default function MovieCast() {
         );
         setActors(detailResult.cast);
         if (actors.length === 0) setActorsLenght(true);
-        console.log(actorsLenght);
       } catch {
         setError(true);
       } finally {

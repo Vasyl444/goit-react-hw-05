@@ -42,7 +42,7 @@ export default function MovieDetailsPage() {
       }
     }
     fetchMovie();
-  }, []);
+  }, [movieId]);
   const { poster_path, title, release_date, genres, overview, vote_average } =
     movieDetails;
   const movieYear = Number.parseInt(release_date);

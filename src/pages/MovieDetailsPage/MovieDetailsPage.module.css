@@ -54,7 +54,6 @@
 .additionalLink {
   color: black;
 }
-.additionalLink:hover,
-.additionalLink:focus {
+.additionalLink:hover {
   color: rgb(187, 73, 73);
 }
