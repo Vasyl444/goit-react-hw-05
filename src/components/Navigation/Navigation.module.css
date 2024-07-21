@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   padding: 8px;
-  box-shadow: 0 0 2px darkgrey;
+  box-shadow: 0 0 3px darkgrey;
   width: 100vw;
   overflow: hidden;
   opacity: 1;

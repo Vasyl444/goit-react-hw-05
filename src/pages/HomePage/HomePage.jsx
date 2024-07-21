@@ -1,6 +1,4 @@
-//import axios from "axios";
 import { useEffect, useState } from "react";
-//import { Link, useSearchParams } from "react-router-dom";
 import getTrendMovie from "../../request-function.js";
 import MovieList from "../../components/MovieList/MovieList.jsx";
 import css from "./HomePage.module.css";
@@ -19,7 +17,6 @@ export default function HomePage() {
       }
     }
     fetchMovies();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className={css.homePageContainer}>
